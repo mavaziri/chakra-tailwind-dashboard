@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #0a0a0a;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Utility classes */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Remove all borders (including pseudo-elements) from last table row */
+/* .divide-y > *:last-child,
+.divide-y > *:last-child::after,
+.divide-y > *:last-child::before {
+  border-top-width: 0 !important;
+  border-bottom-width: 0 !important;
+} */
+
+/* tr:last-child,
+tr:last-child::after,
+tr:last-child::before {
+  border-top-width: 0 !important;
+  border-bottom-width: 0 !important;
+} */
